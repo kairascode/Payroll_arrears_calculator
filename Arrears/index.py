@@ -82,13 +82,13 @@ def calculate():
 
     # print(startDate)
 
-    receipt.insert(END,"\t\t-----------------------------------------------------------\n\n")
+    receipt.insert(END,"\t\t----------------------------------------------------------------------\n\n")
     receipt.insert(END,"\t\tARREARS TO PAY:\t\t" + arrears_choice.get()+"\n\n")
     receipt.insert(END,"\t\tW.E.F:\t\t" + wef.get()+"\n\n")
     receipt.insert(END, "\t\tEND DATE:\t\t" + end_date.get() + "\n\n")
     receipt.insert(END,"\t\tRIGHT PAY:\t\t" + right_pay.get()+"\n\n")
     receipt.insert(END,"\t\tAMOUNT PAID:\t\t" + paid_amount.get()+"\n")
-    receipt.insert(END, "\t\t===============================\n")
+    receipt.insert(END, "\t\t======================================================================\n")
     receipt.insert(END, "\t\t THE OFFICER THEREFORE HAS AN ARREAR OF Kshs. " + toPay +"\n\n")
 
 
