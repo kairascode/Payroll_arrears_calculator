@@ -69,26 +69,23 @@ receipt.grid(row=0,column=0)
 scroll=tk.Scrollbar(workspace,command=receipt.yview)
 scroll.pack(side=RIGHT, fill=Y)
 
-receipt.insert(END, "\t\t\t\tARREARS\n")
-
+receipt.insert(END, "\n\n\n\n\n\n\n\n")
 def calculate():
     rightPay=int(right_pay.get())
     wrongPay=int(paid_amount.get())
 
     toPay=str(wrongPay-rightPay)
 
-    # startDate=
 
+    # receipt.insert(END, "\t\t\t\tARREARS\n")
 
-    # print(startDate)
-
-    receipt.insert(END,"\t\t----------------------------------------------------------------------\n\n")
+    # receipt.insert(END,"\t\t----------------------------------------------------------------------\n\n")
     receipt.insert(END,"\t\tARREARS TO PAY:\t\t" + arrears_choice.get()+"\n\n")
-    receipt.insert(END,"\t\tW.E.F:\t\t" + wef.get()+"\n\n")
-    receipt.insert(END, "\t\tEND DATE:\t\t" + end_date.get() + "\n\n")
-    receipt.insert(END,"\t\tRIGHT PAY:\t\t" + right_pay.get()+"\n\n")
-    receipt.insert(END,"\t\tAMOUNT PAID:\t\t" + paid_amount.get()+"\n")
-    receipt.insert(END, "\t\t======================================================================\n")
+    receipt.insert(END,"\t\tW.E.F:\t" + wef.get()+"")
+    receipt.insert(END, "\t\tEND DATE:\t" + end_date.get() + "\n\n")
+    receipt.insert(END,"\t\tRIGHT PAY:\t" + right_pay.get()+"")
+    receipt.insert(END,"\t\tAMOUNT PAID:\t" + paid_amount.get()+"\n")
+    receipt.insert(END, "\t\t==========================================================\n")
     receipt.insert(END, "\t\t THE OFFICER THEREFORE HAS AN ARREAR OF Kshs. " + toPay +"\n\n")
 
 
@@ -101,7 +98,7 @@ def calculate():
 #
 #     print(startDate)
 def clearResult():
-    receipt.delete("1.0","end")
+    receipt.delete("2.0","end")
 
 btn_calculate=Button(form, text='Calculate', command=calculate, padx=0, pady=1, bd=10,bg='green', fg="black", font=('cambria',12,"bold")).grid(row=5,column=0)
 
