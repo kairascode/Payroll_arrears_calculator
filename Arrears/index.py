@@ -5,6 +5,7 @@ import openpyxl
 from os import startfile
 import os.path
 import tkinter as tk
+from tkcalendar import DateEntry
 
 
 
@@ -49,10 +50,10 @@ arrears_choice.current(0)
 arrears_choice.grid(row=0,column=1)
 
 lblwef=tk.Label(form, text='W.E.F', bd=10, justify='right', font=('cambria',12,'bold')).grid(row=1,column=0)
-wef_field=tk.Entry(form,textvariable=wef, font=('cambria',12),bd=16, width=25).grid(row=1,column=1)
+wef_field=DateEntry(form,textvariable=wef, font=('cambria',12),bd=16, width=25).grid(row=1,column=1)
 
 lbl_end_date=tk.Label(form, text='End Date', bd=10, justify='right', font=('cambria',12,'bold')).grid(row=2,column=0)
-end_date_field=tk.Entry(form,textvariable=end_date,bd=16, font=('cambria',12), width=25).grid(row=2,column=1)
+end_date_field=DateEntry(form,textvariable=end_date,bd=16, font=('cambria',12), width=25).grid(row=2,column=1)
 
 lbl_right_pay=tk.Label(form, text='Right Pay', bd=10, justify='right', font=('cambria',12,'bold')).grid(row=3,column=0)
 right_pay_field=tk.Entry(form,textvariable=right_pay, bd=16, font=('cambria',12), width=25).grid(row=3,column=1)
