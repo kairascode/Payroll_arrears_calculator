@@ -36,11 +36,18 @@ footer.pack(side=BOTTOM)
 
 #////////////////////////////////////////////////VARIABLES//////////////////////////////////////////////////////////////
 
+
+
 arrtype=StringVar()
 wef=StringVar()
 end_date=StringVar()
 paid_amount=StringVar()
 right_pay=StringVar()
+
+
+
+
+
 #////////////////////////////////////////////////FORM///////////////////////////////////////////////////////////////////
 lblarrears=tk.Label(form, text='Arrears Type', bd=10,  font=('cambria',12,'bold')).grid(row=0,column=0)
 
@@ -50,10 +57,10 @@ arrears_choice.current(0)
 arrears_choice.grid(row=0,column=1)
 
 lblwef=tk.Label(form, text='W.E.F', bd=10, justify='right', font=('cambria',12,'bold')).grid(row=1,column=0)
-wef_field=DateEntry(form,textvariable=wef, font=('cambria',12),bd=16, width=25).grid(row=1,column=1)
+wef_field=DateEntry(form,textvariable=wef, background='#569708', font=('cambria',12),bd=16, width=25).grid(row=1,column=1)
 
 lbl_end_date=tk.Label(form, text='End Date', bd=10, justify='right', font=('cambria',12,'bold')).grid(row=2,column=0)
-end_date_field=DateEntry(form,textvariable=end_date,bd=16, font=('cambria',12), width=25).grid(row=2,column=1)
+end_date_field=DateEntry(form,textvariable=end_date,bd=16, background='#569708', font=('cambria',12), width=25).grid(row=2,column=1)
 
 lbl_right_pay=tk.Label(form, text='Right Pay', bd=10, justify='right', font=('cambria',12,'bold')).grid(row=3,column=0)
 right_pay_field=tk.Entry(form,textvariable=right_pay, bd=16, font=('cambria',12), width=25).grid(row=3,column=1)
@@ -75,29 +82,31 @@ def calculate():
     rightPay=int(right_pay.get())
     wrongPay=int(paid_amount.get())
 
-    toPay=str(wrongPay-rightPay)
+    toPay = float(wrongPay - rightPay)
+    startdate=datetime.strptime(wef.get(),'%m/%d/%y')
+    enddate = datetime.strptime(end_date.get(),'%m/%d/%y')
+
+    nodays=abs(enddate-startdate).days +1
+
+    if(nodays>29):
+        d=int(nodays/31)+1
+        arrears=d*toPay
+    else:
+     print(nodays)
+
+
 
 
     # receipt.insert(END, "\t\t\t\tARREARS\n")
-
     # receipt.insert(END,"\t\t----------------------------------------------------------------------\n\n")
-    receipt.insert(END,"\t\tARREARS TO PAY:\t\t" + arrears_choice.get()+"\n\n")
+    receipt.insert(END,"\t\tARREARS TO PAY:\t\t" + arrears_choice.get()+ "for "+ str(nodays)+" Days\n\n")
     receipt.insert(END,"\t\tW.E.F:\t" + wef.get()+"")
     receipt.insert(END, "\t\tEND DATE:\t" + end_date.get() + "\n\n")
     receipt.insert(END,"\t\tRIGHT PAY:\t" + right_pay.get()+"")
     receipt.insert(END,"\t\tAMOUNT PAID:\t" + paid_amount.get()+"\n")
     receipt.insert(END, "\t\t==========================================================\n")
-    receipt.insert(END, "\t\t THE OFFICER THEREFORE HAS AN ARREAR OF Kshs. " + toPay +"\n\n")
+    receipt.insert(END, "\t\t THE OFFICER THEREFORE HAS AN ARREAR OF Kshs. " + str(arrears)+"\n\n")
 
-
-# def calculate():
-#
-#     endDate=end_date
-#
-#     # ress=int(endDate+startDate)
-#
-#
-#     print(startDate)
 def clearResult():
     receipt.delete("2.0","end")
 
