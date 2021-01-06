@@ -65,8 +65,8 @@ receipt.grid(row=0,column=0)
 scroll=tk.Scrollbar(workspace,command=receipt.yview)
 scroll.pack(side=RIGHT, fill=Y)
 
-receipt.insert(END, "\n\n\n\n\n\n\n\n")#START OF THE RECEIPT FORMATTING TO ALLOW SPACE FOR CAPTURE SHEET HEADING
-
+receipt.insert(END,"\n\n\n\n\n\n\n\n")#START OF THE RECEIPT FORMATTING TO ALLOW SPACE FOR CAPTURE SHEET HEADING
+receipt.insert(END,"DESCRIPTION\t""\tW.E.F\t""END DATE\t""\tRIGHT PAY\t""\tAMOUNT PAID\t""\tARREARS\t""\n")
 
 def calculate():
     rightPay=float(right_pay.get())
@@ -80,22 +80,24 @@ def calculate():
 
     daysInMonth = monthlen(enddate.year, enddate.month)
 
-    receipt.insert(END,"\t\tARREARS TO PAY:\t\t" + arrears_choice.get()+ "for "+ str(nodays)+" Days\n\n")
-    receipt.insert(END,"\t\tW.E.F:\t" + wef.get()+"")
-    receipt.insert(END, "\t\tEND DATE:\t" + end_date.get() + "\n\n")
-    receipt.insert(END,"\t\tRIGHT PAY:\t" + right_pay.get()+"")
-    receipt.insert(END,"\t\tAMOUNT PAID:\t" + paid_amount.get()+"\n")
-    receipt.insert(END, "\t\t THE OFFICER THEREFORE HAS AN ARREAR OF Kshs. " + str(daysCalculator(nodays,toPay,daysInMonth))+"\n\n")
-    receipt.insert(END, "\t\t==========================================================\n")
+
+    receipt.insert(END,arrears_choice.get()+"\t\t"  +wef.get()+"\t"+end_date.get()+"\t\t"+right_pay.get()+"\t\t" +paid_amount.get()+"\t\t"+ str(daysCalculator(nodays,toPay,daysInMonth))+"\n")
+
+    # receipt.insert(END, "\t\t====================================================================\n")
 
 # def saveData():
 #     if __name__=='__main__':
 #         saveReceipt(receipt)
 
+def genReceipt():
+    saveReceipt(receipt)
+    openDialog()
+
+
 
 btn_calculate=Button(form, text='Calculate', command=calculate, padx=0, pady=1, bd=10,bg='green', fg="black", font=('cambria',12,"bold")).grid(row=5,column=0)
 
-btn_cancel=Button(form, text='SAVE', command=saveReceipt(receipt), padx=0, pady=1, bd=10, bg='red', fg="black", font=('cambria',12,"bold")).grid(row=5,column=1)
+btn_cancel=Button(form, text='SAVE', command=genReceipt, padx=0, pady=1, bd=10, bg='red', fg="black", font=('cambria',12,"bold")).grid(row=5,column=1)
 
 
 

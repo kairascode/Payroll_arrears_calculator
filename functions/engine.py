@@ -1,4 +1,9 @@
 import os
+from tkinter import filedialog as filedia
+
+def openDialog():
+    filedia.askopenfilenames(initialdir="./MyFiles")
+
 
 def saveReceipt(receipt):
 
@@ -7,6 +12,7 @@ def saveReceipt(receipt):
     os.write(file,rec)
 
     os.close(file)
+    openDialog()
 
 def clearScreen(receipt):
     receipt.delete("2.0", "end")
