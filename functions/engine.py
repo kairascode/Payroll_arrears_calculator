@@ -1,6 +1,7 @@
 import os
 from tkinter import filedialog as filedia
 
+
 def openDialog():
     filedia.askopenfilenames(initialdir="./MyFiles")
 
@@ -23,16 +24,21 @@ def daysCalculator(nodays,toPay,daysInMonth):
         months = int(nodays / 31) + 1
 
         arrears = round(float(months * toPay), 2)
-
-        df = round(arrears % 1, 2)
-
-        return arrears
+        print(arrears)
+        return m_round(arrears,trac=0.5)
     else:  # enable calculation in terms of days where dates fall within the same month
         ndays = float(nodays / daysInMonth)
 
         arrears = round(float(ndays * toPay), 2)
 
         df = round(arrears % 1, 2)
+        print(arrears)
+        return m_round(arrears,trac=0.5)
 
-        return arrears
 
+
+def m_round(amnt,trac=0.05):#ENABLE PRECISION ON CENTS
+    getNumber=0.5 if amnt>=0 else -0.5
+
+    print(getNumber)
+    return int(amnt/trac+getNumber)*trac

@@ -66,28 +66,23 @@ scroll=tk.Scrollbar(workspace,command=receipt.yview)
 scroll.pack(side=RIGHT, fill=Y)
 
 receipt.insert(END,"\n\n\n\n\n\n\n\n")#START OF THE RECEIPT FORMATTING TO ALLOW SPACE FOR CAPTURE SHEET HEADING
+receipt.insert(END,"\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tARREARS\n\n")
 receipt.insert(END,"DESCRIPTION\t""\tW.E.F\t""END DATE\t""\tRIGHT PAY\t""\tAMOUNT PAID\t""\tARREARS\t""\n")
 
 def calculate():
-    rightPay=float(right_pay.get())
-    wrongPay=float(paid_amount.get())
+    rightPay=m_round(float(right_pay.get()),trac=0.5)
+    wrongPay=m_round(float(paid_amount.get()),trac=0.5)
 
     toPay = float(rightPay - wrongPay)
-    startdate=datetime.strptime(wef.get(),'%m/%d/%y')
-    enddate = datetime.strptime(end_date.get(),'%m/%d/%y')
+    startdate=datetime.strptime(wef.get(),'%m/%d/%y').date()
+    enddate = datetime.strptime(end_date.get(),'%m/%d/%y').date()
 
     nodays=abs(enddate-startdate).days +1
 
     daysInMonth = monthlen(enddate.year, enddate.month)
 
 
-    receipt.insert(END,arrears_choice.get()+"\t\t"  +wef.get()+"\t"+end_date.get()+"\t\t"+right_pay.get()+"\t\t" +paid_amount.get()+"\t\t"+ str(daysCalculator(nodays,toPay,daysInMonth))+"\n")
-
-    # receipt.insert(END, "\t\t====================================================================\n")
-
-# def saveData():
-#     if __name__=='__main__':
-#         saveReceipt(receipt)
+    receipt.insert(END,arrears_choice.get()+"\t\t"+str(startdate)+"\t"+str(enddate)+"\t\t"+str(rightPay)+"\t\t" +str(wrongPay)+"\t\t"+ str(daysCalculator(nodays,toPay,daysInMonth))+"\n")
 
 def genReceipt():
     saveReceipt(receipt)
