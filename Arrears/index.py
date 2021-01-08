@@ -43,7 +43,7 @@ right_pay=StringVar()
 lblarrears=tk.Label(form, text='Arrears Type', bd=10,  font=('cambria',12,'bold')).grid(row=0,column=0)
 
 arrears_choice=ttk.Combobox(form, textvariable=arrtype,state='readonly',font=('cambria',12),width=20)
-arrears_choice['value']=('','Basic Salary','House Allowance','Commuter Allowance','Hardship Allowance')
+arrears_choice['value']=('','BasicSalary','HouseAllowance','CommuterAllowance','HardshipAllowance')
 arrears_choice.current(0)
 arrears_choice.grid(row=0,column=1)
 
@@ -59,15 +59,14 @@ right_pay_field=tk.Entry(form,textvariable=right_pay, bd=16, font=('cambria',12)
 lbl_paid=tk.Label(form, text='Paid Amount', bd=10, justify='right', font=('cambria',12,'bold')).grid(row=4,column=0)
 paid_amount_field=tk.Entry(form,textvariable=paid_amount,bd=16, font=('cambria',12),justify='left', width=25).grid(row=4,column=1)
 
-receipt=tk.Text(results, relief='sunken', state='normal', bd=20,font=('cambria',12,'bold'))
+receipt=tk.Text(results, relief='sunken', state='normal',  bd=20,font=('cambria',12,'bold'))
 receipt.grid(row=0,column=0)
 
 scroll=tk.Scrollbar(workspace,command=receipt.yview)
 scroll.pack(side=RIGHT, fill=Y)
-
-receipt.insert(END,"\n\n\n\n\n\n\n\n")#START OF THE RECEIPT FORMATTING TO ALLOW SPACE FOR CAPTURE SHEET HEADING
+receipt.insert(END,"\n\n")#START OF THE RECEIPT FORMATTING TO ALLOW SPACE FOR CAPTURE SHEET HEADING
 receipt.insert(END,"\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tARREARS\n\n")
-receipt.insert(END,"DESCRIPTION\t""\tW.E.F\t""END DATE\t""\tRIGHT PAY\t""\tAMOUNT PAID\t""\tARREARS\t""\n")
+receipt.insert(END,"DESCRIPTION\t\tW.E.F\tEND DATE\t\tRIGHT PAY\t\tAMOUNT PAID\t\tARREARS\t\n")
 
 def calculate():
     rightPay=m_round(float(right_pay.get()),trac=0.5)
