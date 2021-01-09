@@ -3,21 +3,27 @@ from calendar import monthlen
 from datetime import datetime
 from tkinter import *
 from tkinter import ttk
-
 from tkcalendar import DateEntry
-
 from functions.engine import *
+from dotenv import load_dotenv
+from pathlib import Path
+
+#LOAD APP SETTINGS FROM THE .ENV FILE
+env_path=Path('.')/'.env'
+load_dotenv(dotenv_path=env_path)
+
+
 
 root=tk.Tk()
 
 root.geometry("1400x800+0+0" )
-root.title("PAYROLL MASTER")
+root.title(os.getenv("TITLE"))
 
 
 TopFrame=tk.Frame(root,width=1400, height=50,bd=20, padx=0,pady=0, relief='flat')
 TopFrame.pack(side=TOP)
 
-toplabel=tk.Label(TopFrame,relief='sunken',width=100,bg='#030407',fg='#986706',justify='center', font=('cambria',26,'bold'),text='PAYROLL ARREARS CALCULATOR').pack()
+toplabel=tk.Label(TopFrame,relief='sunken',width=100,bg='#030407',fg='#986706',justify='center', font=('cambria',26,'bold'),text=os.getenv("APPNAME")).pack()
 
 workspace=tk.Frame(root,width=1400, pady=0, relief='sunken', bg='#456479', bd=20)
 workspace.pack(side=TOP)
@@ -47,6 +53,10 @@ arrears_choice['value']=('','BasicSalary','HouseAllowance','CommuterAllowance','
 arrears_choice.current(0)
 arrears_choice.grid(row=0,column=1)
 
+#REGISTER VALIDATOR
+
+reg=form.register(myValidator)
+
 lblwef=tk.Label(form, text='W.E.F', bd=10, justify='right', font=('cambria',12,'bold')).grid(row=1,column=0)
 wef_field=DateEntry(form,textvariable=wef, background='#569708', font=('cambria',12),bd=16, width=25).grid(row=1,column=1)
 
@@ -55,6 +65,7 @@ end_date_field=DateEntry(form,textvariable=end_date,bd=16, background='#569708',
 
 lbl_right_pay=tk.Label(form, text='Right Pay', bd=10, justify='right', font=('cambria',12,'bold')).grid(row=3,column=0)
 right_pay_field=tk.Entry(form,textvariable=right_pay, bd=16, font=('cambria',12), width=25).grid(row=3,column=1)
+
 
 lbl_paid=tk.Label(form, text='Paid Amount', bd=10, justify='right', font=('cambria',12,'bold')).grid(row=4,column=0)
 paid_amount_field=tk.Entry(form,textvariable=paid_amount,bd=16, font=('cambria',12),justify='left', width=25).grid(row=4,column=1)

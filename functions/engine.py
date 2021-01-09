@@ -1,4 +1,5 @@
 import os
+from tkinter import *
 from tkinter import ttk,  filedialog as filedia
 from dotenv import load_dotenv
 from pathlib import Path
@@ -71,4 +72,15 @@ def genTable():
     tree.heading("ARREARS", text="ARREARS", anchor=ttk.CENTER)
 
 
+
+def  myValidator(dd):
+        if dd.isDigit():
+            print(dd)
+            return True
+        elif dd is "":
+            print(dd)
+            return True
+        else:
+            print(dd)
+            return False
 
