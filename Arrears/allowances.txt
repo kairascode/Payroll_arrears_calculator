@@ -1,0 +1,8 @@
+
+
+
+House_Allowance
+Commuter_Allowance
+Hardship_Allowance
+Basic_salary
+Speacial_Allowance
