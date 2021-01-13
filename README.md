@@ -21,7 +21,7 @@ The App consists of:
      
 6.   validation of Entries to ensure that only int/float/decimal numbers for right pay and paid amount is input into the App
 
-7.  tests.py that does the UNITTEST for the functions in the app
+7.  tests.py that does the UNIT TEST for the functions in the app
      
 
  
