@@ -100,7 +100,9 @@ def calculate():
     receipt.insert(END, "\t\tARREARS\t"+ str(arrears)+"\n")
     receipt.insert(END,"\t\t--------------------------------------------------------------------------------------------\n")
 
-    genReceipt(receipt)
+def genReceipt():
+    saveReceipt(receipt)
+    clearScreen(receipt)
 
 btn_calculate=Button(form, text='Calculate', command=calculate, padx=0, pady=1, bd=10,bg='green', fg="black", font=('cambria',12,"bold")).grid(row=5,column=0)
 

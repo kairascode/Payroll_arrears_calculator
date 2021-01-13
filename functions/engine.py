@@ -51,7 +51,7 @@ def m_round(amnt,trac=0.05):#ENABLE PRECISION ON CENTS
 def  myValidator(dd):
         try:
             validNo=round((float(dd.get())),2)
-            print(validNo)
+
             return validNo
         except ValueError:
 
@@ -119,6 +119,3 @@ def calculate(right_pay,paid_amount,arrears_choice,wef,end_date,receipt):
 
     genSheet(tarrears, nodays, startdate, enddate, rightPay, wrongPay, arrears)
 
-def genReceipt(receipt):
-    saveReceipt(receipt)
-    clearScreen(receipt)
