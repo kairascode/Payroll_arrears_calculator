@@ -7,6 +7,8 @@ from pathlib import Path
 from os import startfile
 from tkinter import messagebox
 from openpyxl import *
+from calendar import monthlen
+from datetime import datetime
 
 #LOAD APP SETTINGS FROM THE .ENV FILE
 env_path=Path('.')/'.env'
@@ -86,3 +88,36 @@ def genSheet(tarrears,nodays,startdate,enddate,rightPay,wrongPay,arrears):
 
      file.save("./MyFiles/arrears.xlsx")
 
+def calculate(right_pay,paid_amount,arrears_choice,wef,end_date,receipt):
+    # SANITIZE INPUTS
+    getrightPay=myValidator(right_pay)
+    getwrongPay=myValidator(paid_amount)
+    tarrears=arrears_choice.get()
+
+    rightPay=m_round(getrightPay,trac=0.05)
+    wrongPay=m_round(getwrongPay,trac=0.05)
+
+    toPay = float(rightPay - wrongPay)
+    startdate=datetime.strptime(wef.get(),'%m/%d/%y').date()
+    enddate = datetime.strptime(end_date.get(),'%m/%d/%y').date()
+
+    nodays=abs(enddate-startdate).days +1
+
+    daysInMonth = monthlen(enddate.year, enddate.month)
+
+    arrears=daysCalculator(nodays,toPay,daysInMonth)
+
+    receipt.insert(END, "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tARREARS\n")
+    receipt.insert(END, "\t\t____________________________________________________________________________\n")
+    receipt.insert(END, "\t\tDESCRIPTION:\t"+arrears_choice.get()+"\t\t\tDAYS TO PAY:\t"+str(nodays)+"\n\n")
+    receipt.insert(END, "\t\tW.E.F:\t"+str(startdate)+"\t\t\tEND DATE:\t"+str(enddate)+"\n\n")
+    receipt.insert(END, "\t\tRIGHT PAY:\t"+str(rightPay)+"\t\t\tAMOUNT PAID:\t"+str(wrongPay)+"\n")
+    receipt.insert(END,"\t\t____________________________________________________________________________\n")
+    receipt.insert(END, "\t\tARREARS\t"+ str(arrears)+"\n")
+    receipt.insert(END,"\t\t--------------------------------------------------------------------------------------------\n")
+
+    genSheet(tarrears, nodays, startdate, enddate, rightPay, wrongPay, arrears)
+
+def genReceipt(receipt):
+    saveReceipt(receipt)
+    clearScreen(receipt)

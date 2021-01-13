@@ -2,8 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fe1d1011-d14e-4a1b-a503-3fee6d6475c5" name="Default" comment="first commit">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Arrears/tests.py" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Arrears/table.py" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Arrears/MyFiles/arrears.xlsx" afterPath="$PROJECT_DIR$/Arrears/MyFiles/arrears.xlsx" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Arrears/MyFiles/Receipt.txt" afterPath="$PROJECT_DIR$/Arrears/MyFiles/Receipt.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Arrears/index.py" afterPath="$PROJECT_DIR$/Arrears/index.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/functions/engine.py" afterPath="$PROJECT_DIR$/functions/engine.py" />
     </list>
     <ignored path="Arrears.iws" />
@@ -25,13 +29,25 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Arrears/index.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="117">
-              <caret line="94" column="0" selection-start-line="94" selection-start-column="0" selection-end-line="94" selection-end-column="0" />
+            <state relative-caret-position="-120">
+              <caret line="88" column="0" selection-start-line="88" selection-start-column="0" selection-end-line="88" selection-end-column="0" />
               <folding>
                 <element signature="e#0#20#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="tests.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Arrears/tests.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="199">
+              <caret line="14" column="55" selection-start-line="14" selection-start-column="55" selection-end-line="14" selection-end-column="55" />
+              <folding>
+                <element signature="e#0#15#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -40,8 +56,8 @@
       <file leaf-file-name="db.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/functions/db.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+            <state relative-caret-position="221">
+              <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
               <folding>
                 <element signature="e#0#30#0" expanded="true" />
               </folding>
@@ -62,8 +78,8 @@
       <file leaf-file-name="engine.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/functions/engine.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="117">
-              <caret line="39" column="52" selection-start-line="39" selection-start-column="52" selection-end-line="39" selection-end-column="52" />
+            <state relative-caret-position="-16">
+              <caret line="90" column="72" selection-start-line="90" selection-start-column="4" selection-end-line="90" selection-end-column="72" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
@@ -94,13 +110,14 @@
         <option value="$PROJECT_DIR$/Arrears/excel.py" />
         <option value="$PROJECT_DIR$/Arrears/MyFiles/Receipt.txt" />
         <option value="$PROJECT_DIR$/Arrears/engine.py" />
-        <option value="$PROJECT_DIR$/Arrears/table.py" />
         <option value="$PROJECT_DIR$/Arrears/test.py" />
         <option value="$PROJECT_DIR$/Arrears/allowances.txt" />
         <option value="$PROJECT_DIR$/functions/test.py" />
         <option value="$PROJECT_DIR$/Arrears/.env" />
-        <option value="$PROJECT_DIR$/Arrears/index.py" />
         <option value="$PROJECT_DIR$/functions/engine.py" />
+        <option value="$PROJECT_DIR$/Arrears/index.py" />
+        <option value="$PROJECT_DIR$/Arrears/table.py" />
+        <option value="$PROJECT_DIR$/Arrears/tests.py" />
       </list>
     </option>
   </component>
@@ -173,6 +190,24 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Arrears" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Arrears" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Arrears" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MyFiles" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -193,41 +228,7 @@
       <recent name="C:\Users\ALEX KAIRA\Desktop\PROJECTS\Arrears\Arrears\images" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.index">
-    <configuration default="false" name="tkkk" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Arrears" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="Arrears" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Arrears/tkkk.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <method />
-    </configuration>
-    <configuration default="false" name="myvariables" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Arrears" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="Arrears" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Arrears/myvariables.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="Python tests.Unittests in tests (1)">
     <configuration default="false" name="Unittests in setup" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -262,7 +263,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="Arrears" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Arrears/table.py" />
+      <option name="SCRIPT_NAME" value="C:\Users\ALEX KAIRA\Desktop\PROJECTS\Arrears\Arrears\tests.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
@@ -282,6 +283,50 @@
       <option name="SCRIPT_NAME" value="C:\Users\ALEX KAIRA\Desktop\PROJECTS\Arrears\functions\db.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="Unittests in tests" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Arrears" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Arrears" />
+      <option name="SCRIPT_NAME" value="C:\Users\ALEX KAIRA\Desktop\PROJECTS\Arrears\Arrears\tests.py" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="PUREUNITTEST" value="true" />
+      <option name="PARAMS" value="" />
+      <option name="USE_PARAM" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="Unittests in tests (1)" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Arrears" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Arrears" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Arrears/tests.py" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="PUREUNITTEST" value="true" />
+      <option name="PARAMS" value="" />
+      <option name="USE_PARAM" value="false" />
       <method />
     </configuration>
     <configuration default="true" type="PythonConfigurationType" factoryName="Python">
@@ -437,19 +482,19 @@
     </configuration>
     <list size="6">
       <item index="0" class="java.lang.String" itemvalue="Python.index" />
-      <item index="1" class="java.lang.String" itemvalue="Python.tkkk" />
-      <item index="2" class="java.lang.String" itemvalue="Python.myvariables" />
-      <item index="3" class="java.lang.String" itemvalue="Python tests.Unittests in setup" />
-      <item index="4" class="java.lang.String" itemvalue="Python.table" />
-      <item index="5" class="java.lang.String" itemvalue="Python.test" />
+      <item index="1" class="java.lang.String" itemvalue="Python tests.Unittests in setup" />
+      <item index="2" class="java.lang.String" itemvalue="Python.table" />
+      <item index="3" class="java.lang.String" itemvalue="Python.test" />
+      <item index="4" class="java.lang.String" itemvalue="Python tests.Unittests in tests" />
+      <item index="5" class="java.lang.String" itemvalue="Python tests.Unittests in tests (1)" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.test" />
-        <item index="1" class="java.lang.String" itemvalue="Python.table" />
-        <item index="2" class="java.lang.String" itemvalue="Python tests.Unittests in setup" />
-        <item index="3" class="java.lang.String" itemvalue="Python.myvariables" />
-        <item index="4" class="java.lang.String" itemvalue="Python.tkkk" />
+        <item index="0" class="java.lang.String" itemvalue="Python tests.Unittests in tests (1)" />
+        <item index="1" class="java.lang.String" itemvalue="Python tests.Unittests in tests" />
+        <item index="2" class="java.lang.String" itemvalue="Python.test" />
+        <item index="3" class="java.lang.String" itemvalue="Python.table" />
+        <item index="4" class="java.lang.String" itemvalue="Python tests.Unittests in setup" />
       </list>
     </recent_temporary>
   </component>
@@ -470,11 +515,35 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Unittests_in_setup - 2021.01.02 at 17h 14m 00s.xml">
-      <configuration name="Unittests in setup" configurationId="tests" />
+    <history-entry file="Unittests_in_table - 2021.01.13 at 12h 30m 51s.xml">
+      <configuration name="Unittests in table" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_setup - 2021.01.02 at 17h 14m 20s.xml">
-      <configuration name="Unittests in setup" configurationId="tests" />
+    <history-entry file="Unittests_in_tests - 2021.01.13 at 12h 32m 57s.xml">
+      <configuration name="Unittests in tests" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_tests - 2021.01.13 at 12h 33m 03s.xml">
+      <configuration name="Unittests in tests" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_tests_(1) - 2021.01.13 at 12h 33m 16s.xml">
+      <configuration name="Unittests in tests (1)" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_tests_(1) - 2021.01.13 at 12h 38m 22s.xml">
+      <configuration name="Unittests in tests (1)" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_tests_(1) - 2021.01.13 at 12h 40m 06s.xml">
+      <configuration name="Unittests in tests (1)" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_tests_(1) - 2021.01.13 at 12h 43m 08s.xml">
+      <configuration name="Unittests in tests (1)" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_tests_(1) - 2021.01.13 at 12h 43m 27s.xml">
+      <configuration name="Unittests in tests (1)" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_tests_(1) - 2021.01.13 at 13h 02m 54s.xml">
+      <configuration name="Unittests in tests (1)" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_tests_(1) - 2021.01.13 at 13h 04m 10s.xml">
+      <configuration name="Unittests in tests (1)" configurationId="tests" />
     </history-entry>
   </component>
   <component name="TodoView" selected-index="2">
@@ -488,14 +557,14 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2514881" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2514881" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3267974" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.37745097" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.37806875" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32026145" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -831,18 +900,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Arrears/table.py">
+    <entry file="file://$PROJECT_DIR$/Arrears/index.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="10" column="23" selection-start-line="10" selection-start-column="23" selection-end-line="10" selection-end-column="23" />
-          <folding />
+        <state relative-caret-position="-120">
+          <caret line="88" column="0" selection-start-line="88" selection-start-column="0" selection-end-line="88" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#20#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/functions/db.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+        <state relative-caret-position="221">
+          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
           <folding>
             <element signature="e#0#30#0" expanded="true" />
           </folding>
@@ -851,20 +922,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/functions/engine.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="117">
-          <caret line="39" column="52" selection-start-line="39" selection-start-column="52" selection-end-line="39" selection-end-column="52" />
+        <state relative-caret-position="-16">
+          <caret line="90" column="72" selection-start-line="90" selection-start-column="4" selection-end-line="90" selection-end-column="72" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Arrears/index.py">
+    <entry file="file://$PROJECT_DIR$/Arrears/tests.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="117">
-          <caret line="94" column="0" selection-start-line="94" selection-start-column="0" selection-end-line="94" selection-end-column="0" />
+        <state relative-caret-position="199">
+          <caret line="14" column="55" selection-start-line="14" selection-start-column="55" selection-end-line="14" selection-end-column="55" />
           <folding>
-            <element signature="e#0#20#0" expanded="true" />
+            <element signature="e#0#15#0" expanded="true" />
           </folding>
         </state>
       </provider>

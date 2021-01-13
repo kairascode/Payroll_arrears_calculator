@@ -40,7 +40,8 @@ end_date=StringVar()
 paid_amount=StringVar()
 right_pay=StringVar()
 
-
+#REGISTER VALIDATOR
+reg=form.register(myValidator)
 
 #////////////////////////////////////////////////FORM///////////////////////////////////////////////////////////////////
 lblarrears=tk.Label(form, text='Arrears Type', bd=10,  font=('cambria',12,'bold')).grid(row=0,column=0)
@@ -48,10 +49,6 @@ arrears_choice=ttk.Combobox(form, textvariable=arrtype,state='readonly',font=('c
 arrears_choice['value']=getAllowances()
 arrears_choice.current(0)
 arrears_choice.grid(row=0,column=1)
-
-#REGISTER VALIDATOR
-
-reg=form.register(myValidator)
 
 lblwef=tk.Label(form, text='W.E.F', bd=10, justify='right', font=('cambria',12,'bold')).grid(row=1,column=0)
 wef_field=DateEntry(form,textvariable=wef,  font=('cambria',12),bd=16,state='readonly', width=25).grid(row=1,column=1)
@@ -65,13 +62,13 @@ right_pay_field=tk.Entry(form,textvariable=right_pay, bd=16, font=('cambria',12)
 lbl_paid=tk.Label(form, text='Paid Amount', bd=10, justify='right', font=('cambria',12,'bold')).grid(row=4,column=0)
 paid_amount_field=tk.Entry(form,textvariable=paid_amount,bd=16, font=('cambria',12),justify='left', width=25).grid(row=4,column=1)
 
-
-
 receipt=tk.Text(results, relief='sunken', state='normal',  bd=20,font=('cambria',12,'bold'))
 receipt.grid(row=0,column=0)
 
 scroll=tk.Scrollbar(workspace,command=receipt.yview)
 scroll.pack(side=RIGHT, fill=Y)
+
+
 receipt.insert(END,"\n\n")#START OF THE RECEIPT FORMATTING TO ALLOW SPACE FOR CAPTURE SHEET HEADING
 
 
@@ -103,15 +100,10 @@ def calculate():
     receipt.insert(END, "\t\tARREARS\t"+ str(arrears)+"\n")
     receipt.insert(END,"\t\t--------------------------------------------------------------------------------------------\n")
 
-    genSheet(tarrears,nodays, startdate, enddate, rightPay,wrongPay,arrears)
-
-def genReceipt():
-    saveReceipt(receipt)
-    clearScreen(receipt)
+    genReceipt(receipt)
 
 btn_calculate=Button(form, text='Calculate', command=calculate, padx=0, pady=1, bd=10,bg='green', fg="black", font=('cambria',12,"bold")).grid(row=5,column=0)
 
 btn_cancel=Button(form, text='SAVE', command=genReceipt, padx=0, pady=1, bd=10, bg='red', fg="black", font=('cambria',12,"bold")).grid(row=5,column=1)
-
 
 root.mainloop()
