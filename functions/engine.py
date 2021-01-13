@@ -33,13 +33,13 @@ def daysCalculator(nodays,toPay,daysInMonth):
     if (nodays > 29):  # enable calculation in terms of months
         months = int(nodays / 31) + 1
 
-        arrears = m_round(round((float(months * toPay)), 2),trac=0.05)
+        arrears = m_round(float(months * toPay),trac=0.05)
 
         return arrears
     else:  # enable calculation in terms of days where dates fall within the same month
         ndays = float(nodays / daysInMonth)
 
-        arrears = m_round(round(float(ndays * toPay), 2),trac=0.05)
+        arrears = m_round(float(ndays * toPay),trac=0.05)
 
         return arrears
 
