@@ -44,8 +44,9 @@ def daysCalculator(nodays,toPay,daysInMonth):
         return arrears
 
 def m_round(amnt,trac=0.05):#ENABLE PRECISION ON CENTS
-    getNumber=0.05 if amnt>=0 else -0.05
-    return int(amnt/trac+getNumber)*trac
+      nmult = 0.05 * round(amnt / 0.05)
+
+      return nmult
 
 def  myValidator(dd):
         try:
