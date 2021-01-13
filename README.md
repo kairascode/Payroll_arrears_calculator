@@ -7,6 +7,7 @@ The App is developed using the tkinter framework Python 3.7 environment.
 
 The App consists of:
 1.   index.py file which defines the structure of the GUI components and the main function that runs the Application.
+     Run this file to start the App.
  
 2.   .env file which is the main configuration file for the app. This contains definations for GUI components in the App
      including the combo box that enables selection of the Earnings to be used in calculations
@@ -22,6 +23,7 @@ The App consists of:
 6.   validation of Entries to ensure that only int/float/decimal numbers for right pay and paid amount is input into the App
 
 7.  tests.py that does the UNIT TEST for the functions in the app
+
      
 
  
